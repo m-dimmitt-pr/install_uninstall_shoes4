@@ -17,11 +17,12 @@ note: I can currently hack this into working on a local computer <br>but it does
 
 ## (macintosh) How do I package this repository in it's current form?
 1) git clone https://github.com/shoes/shoes4.git
-2) cd shoes4
-3) git clone https://github.com/MichaelDimmitt/install_uninstall_shoes4.git
+2) git clone https://github.com/MichaelDimmitt/install_uninstall_shoes4.git
+3) cd shoes4
 4) rvm install jruby-9.1.8.0 [ x86_64 ]
-5) bin/shoes package --mac install_uninstall_shoes4/Shoes.rb
-6) app can be found in "pkg" folder should be created in repo install_uninstall_shoes4/
+5) (without package): bin/shoes ../install_uninstall_shoes4/Shoes.rb
+6) (with package   ): bin/shoes package --mac ../install_uninstall_shoes4/Shoes.rb
+7) app can be found in "pkg" folder should be created in repo install_uninstall_shoes4/
 
 ## How to connect your program's install and uninstall to the project
 1) cd install_uninstall_shoes4/app

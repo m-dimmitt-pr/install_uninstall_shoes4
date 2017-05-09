@@ -1,5 +1,7 @@
 <hr>
 
+### Interested in output for current shoes4 packaging? see report: [#4](../../../../MichaelDimmitt/install_uninstall_shoes4/issues/4)
+
 # (Not Currently Released), here is why:<br>(Not Currently in Production)Remove upon resolution.
 <b>
 1) pending path fix on shoes4.<br>

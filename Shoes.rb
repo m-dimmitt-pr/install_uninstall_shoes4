@@ -9,8 +9,6 @@ Shoes.app(title: "Desktop Background to Screen Saver", width: 600, height: 400, 
         subtitle "Click to Install or Uninstall\n", :align => 'center'
       end
     end
-
-
     stack align: 'center'
       flow do
         @s = stack {}
@@ -26,11 +24,11 @@ Shoes.app(title: "Desktop Background to Screen Saver", width: 600, height: 400, 
     flow do
       stack width: 65 do
         #note: image numbers are not unique. Maybe use classes to solve this problem.
-        @image = image '../install_uninstall_shoes4/app/images/install.png',:margin_left => '33%'
+        @image = image 'app/images/install.png',:margin_left => '33%'
         #@out = `./app/install_driver.sh`
       end
       stack width: 100 do
-        @image = image '../install_uninstall_shoes4/app/images/uninstall.png',:margin_left => '260%'
+        @image = image 'app/images/uninstall.png',:margin_left => '260%'
         @image.click do |button|
         #    @out = `./app/uninstall_driver.sh`
         end

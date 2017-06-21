@@ -2,13 +2,12 @@
 
 ### Interested in output for current shoes4 packaging? see report: [#4](../../../../MichaelDimmitt/install_uninstall_shoes4/issues/4)
 
-# (Not Currently Released), here is why:<br>(Not Currently in Production)Remove upon resolution.
-<b>
-1) pending path fix on shoes4.<br>
-2) pending script execution fix on shoes4.<br>
-3) when path is fixed I should be able to access images.<br><br>
+# works unpackaged
 
-note: I can currently hack this into working on a local computer <br>but it does not scale to other computer environments.
+~~1) pending path fix on shoes4.~~<br>
+~~2) pending script execution fix on shoes4.~~<br>
+~~3) when path is fixed I should be able to access images.~~<br><br>
+
 </b><hr><br>
 # Template for an install/uninstall gui.
 ### Use this template to make a Programmer agnostic mac application.
@@ -23,8 +22,8 @@ note: I can currently hack this into working on a local computer <br>but it does
 3) cd shoes4
 4) rvm install jruby-9.1.8.0 [ x86_64 ]
 5) (without package): bin/shoes ../install_uninstall_shoes4/Shoes.rb
-6) (with package   ): bin/shoes package --mac ../install_uninstall_shoes4/Shoes.rb
-7) app can be found in "pkg" folder should be created in repo install_uninstall_shoes4/
+6) ~~(with package   ): bin/shoes package --mac ../install_uninstall_shoes4/Shoes.rb~~
+7) ~~app can be found in "pkg" folder should be created in repo install_uninstall_shoes4/~~
 
 ## How to connect your program's install and uninstall to the project
 1) cd install_uninstall_shoes4/app

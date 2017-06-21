@@ -1,0 +1,26 @@
+#! /usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+COMMAND=java
+
+# See if Java's there to just use
+$COMMAND -version > /dev/null
+if [ $? != 0 ]; then
+
+  # See if we already have a downloaded JRE we can use
+  if [ ! -d ~/.shoes/jre ]; then
+    mkdir -p ~/.shoes
+
+    # Download a JRE
+    pushd ~/.shoes
+    curl -L https://github.com/shoes/mac-app-templates/releases/download/jre1.8.0_131/jre1.8.0_131.tar.gz > jre.tar.gz
+    tar -zxvf jre.tar.gz
+    mv ~/.shoes/jre1.8.0_131.jre ~/.shoes/jre
+    popd
+  fi
+
+  export JAVA_HOME=~/.shoes/jre/Contents/Home/
+  COMMAND=$JAVA_HOME/bin/java
+fi
+
+$COMMAND -XstartOnFirstThread -jar $DIR/../Java/app.jar

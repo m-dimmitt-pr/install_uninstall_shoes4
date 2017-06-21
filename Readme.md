@@ -3,12 +3,11 @@
 ### Interested in output for current shoes4 packaging? see report: [#4](../../../../MichaelDimmitt/install_uninstall_shoes4/issues/4)
 
 # (Not Currently Released), here is why:<br>(Not Currently in Production)Remove upon resolution.
-<b>
-1) pending path fix on shoes4.<br>
-2) pending script execution fix on shoes4.<br>
-3) when path is fixed I should be able to access images.<br><br>
 
-note: I can currently hack this into working on a local computer <br>but it does not scale to other computer environments.
+~~1) pending path fix on shoes4.~~<br>
+2) pending script execution fix on shoes4.<br>
+~~3) when path is fixed I should be able to access images.~~<br><br>
+
 </b><hr><br>
 # Template for an install/uninstall gui.
 ### Use this template to make a Programmer agnostic mac application.

@@ -13,30 +13,19 @@ Shoes.app(title: "Desktop Background to Screen Saver", width: 600, height: 400, 
       flow do
         @s = stack {}
         button 'Click to install', size: 29, :margin_left => '65%' do
-          @out = `.././install_uninstall_shoes4/app/install_driver.sh`
           @s.clear { para @out }
         end
         button 'Click to uninstall', size: 29, :margin_left => '185%' do
-          @out = `.././install_uninstall_shoes4/app/uninstall_driver.sh`
           @s.clear { para @out }
         end
       end
-    flow do
-      stack width: 65 do
-        #note: image numbers are not unique. Maybe use classes to solve this problem.
-        @image = image 'app/images/install.png',:margin_left => '33%'
-        #@out = `./app/install_driver.sh`
-      end
-      stack width: 100 do
-        @image = image 'app/images/uninstall.png',:margin_left => '260%'
-        @image.click do |button|
-        #    @out = `./app/uninstall_driver.sh`
+      flow do
+        stack width: 65 do
+          @image = image 'app/images/install.png',:margin_left => '33%'
+        end
+        stack width: 100 do
+          @image = image 'app/images/uninstall.png',:margin_left => '260%'
         end
       end
     end
-  end
 end
-#  stack margin: 10 do
-#    background gainsboro
-#    subtitle "I just want to build"
-#  end

@@ -13,10 +13,16 @@ Shoes.app(title: "Desktop Background to Screen Saver", width: 600, height: 400, 
       flow do
         @s = stack {}
         button 'Click to install', size: 29, :margin_left => '65%' do
+          @out = File.expand_path(File.dirname(__FILE__))
+          @out = 'Install was clicked, filepath for Shoes.rb in Shoes.jar' + @out
           @s.clear { para @out }
+          load 'shoes-app/app/install_driver.rb'
         end
         button 'Click to uninstall', size: 29, :margin_left => '185%' do
+          @out = File.expand_path(File.dirname(__FILE__))
+          @out = 'Uninstall was clicked, filepath for Shoes.rb in Shoes.jar' + @out
           @s.clear { para @out }
+          load 'shoes-app/app/uninstall_driver.rb'
         end
       end
       flow do

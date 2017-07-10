@@ -13,10 +13,29 @@ Shoes.app(title: "Desktop Background to Screen Saver", width: 600, height: 400, 
       flow do
         @s = stack {}
         button 'Click to install', size: 29, :margin_left => '65%' do
+
+          script_content = File.read(File.join(__FILE__, "../app/install_driver.sh"))
+          output_path = File.join(Dir.tmpdir, "scripty.sh")
+
+          File.write(output_path, script_content)
+          File.chmod(0755, output_path)
+          @out = `#{output_path}`
+          @out = '        ' + @out
           @s.clear { para @out }
+          File.delete(output_path)
+
         end
         button 'Click to uninstall', size: 29, :margin_left => '185%' do
+
+          script_content = File.read(File.join(__FILE__, "../app/uninstall_driver.sh"))
+          output_path = File.join(Dir.tmpdir, "scripty.sh")
+
+          File.write(output_path, script_content)
+          File.chmod(0755, output_path)
+          @out = `#{output_path}`
+          @out = '        ' + @out
           @s.clear { para @out }
+          File.delete(output_path)
         end
       end
       flow do
